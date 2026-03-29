@@ -1,217 +1,223 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special FX Comics & Collectibles</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #e8e2d0;
+    }
+
+    .cover {
+      max-width: 900px;
+      margin: 20px auto;
+      border: 8px solid #000;
+      box-shadow: 10px 10px 0 #000;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .top-banner {
+      background: #c1121f;
+      color: #fff;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      padding: 10px;
+      border-bottom: 4px solid #000;
+      letter-spacing: 2px;
+    }
+
+    .title {
+      background: #0d1b2a;
+      color: #fff;
+      text-align: center;
+      font-family: 'Bangers', cursive;
+      font-size: 64px;
+      padding: 20px;
+      border-bottom: 6px solid #c1121f;
+    }
+
+    .issue-box,
+    .price-box {
+      position: absolute;
+      top: 10px;
+      background: #fff;
+      border: 3px solid #000;
+      padding: 8px 10px;
+      font-weight: bold;
+      box-shadow: 3px 3px 0 #000;
+      z-index: 2;
+    }
+
+    .issue-box { left: 10px; }
+    .price-box { right: 10px; }
+
+    .hero {
+      position: relative;
+      position: relative;
+      background: url('Logo Small.jpeg') center/cover no-repeat;
+      height: 520px;
+      border-bottom: 6px solid #000;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+    }
+
+    .burst {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      background: #ffea00;
+      border: 3px solid #000;
+      padding: 15px 18px;
+      font-family: 'Bangers', cursive;
+      transform: rotate(-12deg);
+      box-shadow: 4px 4px 0 #000;
+      z-index: 2;
+    }
+
+    .seal {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+      background: #0d1b2a;
+      color: #fff;
+      border: 3px solid #000;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 4px 4px 0 #000;
+      z-index: 2;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .section {
+      border: 3px solid #000;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 4px 4px 0 #000;
+      background: #fff;
+    }
+
+    .section h2 {
+      font-family: 'Bangers', cursive;
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #c1121f;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #000;
+      box-shadow: 3px 3px 0 #000;
+      font-weight: bold;
+      transition: transform 0.1s ease;
+    }
+
+    .btn:hover {
+      transform: translate(-2px, -2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #0d1b2a;
+      color: #fff;
+      border-top: 5px solid #c1121f;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .title {
+        font-size: 40px;
+      }
+
+      .hero {
+        height: 350px;
+      }
+
+      .seal {
+        width: 80px;
+        height: 80px;
+        font-size: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Special FX Comics &amp; Collectibles&lt;/title&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Bangers&amp;family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Roboto', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #e8e2d0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* COMIC COVER FRAME */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.cover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 900px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 20px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 8px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 10px 10px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* TOP BANNER */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.top-banner {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #c1121f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Bangers', cursive;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: 2px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 4px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* TITLE */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #0d1b2a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Bangers', cursive;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 60px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 6px solid #c1121f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* ISSUE + PRICE */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.issue-box {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 3px 3px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.price-box {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>right: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 3px 3px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* HERO IMAGE */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: url(‘cover.jpg’) center/cover no-repeat;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 500px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-bottom: 6px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* BURST */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.burst {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>bottom: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: yellow;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Bangers', cursive;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: rotate(-10deg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 4px 4px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* SEAL */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.seal {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: absolute;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>bottom: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>right: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #0d1b2a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 50%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 100px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 100px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 4px 4px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/* CONTENT STRIP */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.content {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 3px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 4px 4px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.section h2 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Bangers', cursive;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 0 10px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #c1121f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 2px solid #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 3px 3px 0 #000;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #0d1b2a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-top: 5px solid #c1121f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;div class="cover"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="top-banner"&gt;SPECIAL FX COMICS PRESENTS&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="title"&gt;SPECIAL FX COMICS&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="issue-box"&gt;ISSUE #1&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="price-box"&gt;$1.00&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="hero"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="burst"&gt;KEYS INSIDE!&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="seal"&gt;100% FAN APPROVED&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;About&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Golden to modern comics. Curated for collectors, investors, and fans who want the best.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Inventory&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Golden Age • Silver Age • Bronze Age • Modern • Graded Books&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a class="btn" href="https://www.ebay.com/usr/sfxcollectibles" target="_blank"&gt;Shop Now&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Our Mission&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Supporting our son affected by Fragile X Syndrome. Every purchase helps our journey.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Contact&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;Bethel, CT • (646) 456-5132 • philgooljar@yahoo.com&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>© 2026 Special FX Comics &amp; Collectibles</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+<div class="cover">
+
+  <div class="top-banner">SPECIAL FX COMICS PRESENTS</div>
+
+  <div class="title">SPECIAL FX COMICS</div>
+
+  <div class="issue-box">ISSUE #1</div>
+  <div class="price-box">12¢</div>
+
+  <div class="hero">
+    <img src="Logo Small.jpeg" alt="Logo" style="position:absolute; top:20px; left:50%; transform:translateX(-50%); width:120px; border:3px solid #000; box-shadow:4px 4px 0 #000; z-index:3; background:#fff;">
+    <div class="burst">RARE KEYS INSIDE!</div>
+    <div class="seal">100% FAN APPROVED</div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h2>About</h2>
+      <p>From Golden Age classics to modern keys, we bring collectors premium comics and rare finds.</p>
+    </div>
+
+    <div class="section">
+      <h2>Inventory</h2>
+      <p>Golden Age • Silver Age • Bronze Age • Modern • Graded Comics</p>
+      <a class="btn" href="https://www.ebay.com/usr/sfxcollectibles" target="_blank">Browse Collection</a>
+    </div>
+
+    <div class="section">
+      <h2>Our Mission</h2>
+      <p>Every purchase supports our son affected by Fragile X Syndrome. Your support makes a real difference.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Bethel, CT • (646) 456-5132 • philgooljar@yahoo.com</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Special FX Comics & Collectibles
+  </footer>
+
+</div>
+
 </body>
 </html>
+
