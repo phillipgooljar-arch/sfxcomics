@@ -36,7 +36,7 @@
 
     .title {
       background: #0d1b2a;
-      color: TEAL;
+      color: teal;
       text-align: center;
       font-family: 'Bangers', cursive;
       font-size: 64px;
@@ -158,6 +158,34 @@
       font-size: 14px;
     }
 
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 5px 8px;
+      padding: 8px 12px;
+      background: #c1121f;
+      color: #fff;
+      text-decoration: none;
+      border: 2px solid #000;
+      box-shadow: 3px 3px 0 #000;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .social-links img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .social-links a:hover {
+      background: #e63946;
+    }
+
     /* MOBILE */
     @media (max-width: 600px) {
       .title {
@@ -181,7 +209,7 @@
 
 <div class="cover">
 
-  <div class="top-banner">SPECIAL FX COMICS & COLLECTIBLES PRESENTS</div>
+  <div class="top-banner">SPECIAL FX COMICS PRESENTS</div>
 
   <div class="title">SPECIAL FX COMICS</div>
 
@@ -190,7 +218,7 @@
 
   <div class="hero">
     <img src="Logo Small.jpeg" alt="Logo" style="position:absolute; top:20px; left:50%; transform:translateX(-50%); width:120px; border:3px solid #000; box-shadow:4px 4px 0 #000; z-index:3; background:#fff;">
-    <div class="burst">KEYS INSIDE AND MORE!</div>
+    <div class="burst">KEYS INSIDE!</div>
     <div class="seal">100% FAN APPROVED</div>
   </div>
 
@@ -198,12 +226,12 @@
 
     <div class="section">
       <h2>About</h2>
-      <p>From Golden Age classics to modern keys, we bring collectors premium comics and rare collectibles.</p>
+      <p>From Golden Age classics to modern keys, we bring collectors premium comics and rare finds.</p>
     </div>
 
     <div class="section">
       <h2>Inventory</h2>
-      <p>Golden Age • Silver Age • Bronze Age • Modern • Graded Comics • Collectibles.</p>
+      <p>Golden Age • Silver Age • Bronze Age • Modern • Graded Comics and More</p>
       <a class="btn" href="https://www.ebay.com/usr/sfxcollectibles" target="_blank">Browse Collection</a>
     </div>
 
@@ -221,6 +249,16 @@
 
   <footer>
     © 2026 Special FX Comics & Collectibles
+    <div class="social-links">
+      <a href="https://www.facebook.com/specialfxcomicsandcollectibles" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+        Facebook
+      </a>
+      <a href="https://www.instagram.com/specialfxcomicsandcollectibles/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        Instagram
+      </a>
+    </div>
   </footer>
 
 </div>
