@@ -61,17 +61,24 @@
 
     .hero {
       position: relative;
-      position: relative;
-      background: url('Logo Small.jpeg') center/cover no-repeat;
       height: 520px;
       border-bottom: 6px solid #000;
+      /* Comic montage background */
+      background-image:
+        url('comic1.jpg'),
+        url('comic2.jpg'),
+        url('comic3.jpg'),
+        url('comic4.jpg');
+      background-size: 50% 50%;
+      background-position: top left, top right, bottom left, bottom right;
+      background-repeat: no-repeat;
     }
 
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.25);
+      background: rgba(0,0,0,0.35);
     }
 
     .burst {
@@ -220,4 +227,3 @@
 
 </body>
 </html>
-
