@@ -8,319 +8,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #e8e2d0;
-    }
+    body { margin:0; font-family:'Roboto', sans-serif; background:#e8e2d0; }
 
     .cover {
-      max-width: 900px;
-      margin: 20px auto;
-      border: 8px solid #000;
-      box-shadow: 10px 10px 0 #000;
-      background: #fff;
-      position: relative;
-      overflow: hidden;
+      max-width:900px; margin:20px auto; border:8px solid #000;
+      box-shadow:10px 10px 0 #000; background:#fff; position:relative; overflow:hidden;
     }
 
-    .top-banner {
-      background: #c1121f;
-      color: #fff;
-      text-align: center;
-      font-family: 'Bangers', cursive;
-      padding: 10px;
-      border-bottom: 4px solid #000;
-      letter-spacing: 2px;
+    .top-banner { background:#c1121f; color:#fff; text-align:center; font-family:'Bangers', cursive; padding:10px; border-bottom:4px solid #000; }
+    .title { background:#0d1b2a; color:#fff; text-align:center; font-family:'Bangers', cursive; font-size:64px; padding:20px; border-bottom:6px solid #c1121f; }
+
+    .issue-box,.price-box {
+      position:absolute; top:10px; background:#fff; border:3px solid #000; padding:8px 10px;
+      font-weight:bold; box-shadow:3px 3px 0 #000; z-index:3;
     }
+    .issue-box{left:10px;} .price-box{right:10px;}
 
-    .title {
-      background: #0d1b2a;
-      color: teal;
-      text-align: center;
-      font-family: 'Bangers', cursive;
-      font-size: 64px;
-      padding: 20px;
-      border-bottom: 6px solid #c1121f;
-    }
+    .hero { position:relative; height:520px; overflow:hidden; border-bottom:6px solid #000; }
 
-    .issue-box,
-    .price-box {
-      position: absolute;
-      top: 10px;
-      background: #fff;
-      border: 3px solid #000;
-      padding: 8px 10px;
-      font-weight: bold;
-      box-shadow: 3px 3px 0 #000;
-      z-index: 2;
-    }
-
-    .issue-box { left: 10px; }
-    .price-box { right: 10px; }
-
-    .hero {
-      position: relative;
-      height: 520px;
-      border-bottom: 6px solid #000;
-      overflow: hidden;
-    }
-
-    /* Animated scrolling comic montage layer */
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        url('comic1.jpg'),
-        url('comic2.jpg'),
-        url('comic3.jpg'),
-        url('comic4.jpg');
-      background-size: 300px 300px;
-      background-repeat: repeat;
-      opacity: 0.9;
+    /* dynamic layers */
+    .layer {
+      position:absolute; inset:0;
+      background-size:300px 300px;
+      background-repeat:repeat;
       animation: scrollComics 25s linear infinite;
-      z-index: 0;
     }
 
-    /* second layer for fading effect */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        url('comic5.jpg'),
-        url('comic6.jpg'),
-        url('comic7.jpg'),
-        url('comic8.jpg');
-      background-size: 300px 300px;
-      background-repeat: repeat;
-      opacity: 0;
-      animation: scrollComics 25s linear infinite, fadeComics 20s ease-in-out infinite;
-      z-index: 1;
-    }
+    .layer2 { animation: scrollComics 25s linear infinite, fadeComics 20s ease-in-out infinite; opacity:0; }
 
-    /* dark overlay for readability */
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-      z-index: 1;
-    }
+    .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.35); z-index:2; }
 
     @keyframes scrollComics {
-      0% { background-position: 0 0; }
-      100% { background-position: -600px 600px; }
+      0% { background-position:0 0; }
+      100% { background-position:-600px 600px; }
     }
 
-    /* fade between two comic sets */
     @keyframes fadeComics {
-      0%, 100% { opacity: 0; }
-      50% { opacity: 0.6; }
+      0%,100%{opacity:0;} 50%{opacity:0.6;}
     }
 
-    
-      100% { transform: rotate(360deg) scale(1.1); }
-    }
-      100% { background-position: -800px 800px; }
-    }
+    .burst { position:absolute; bottom:25px; left:25px; background:#ffea00; border:3px solid #000; padding:15px; font-family:'Bangers'; transform:rotate(-12deg); box-shadow:4px 4px 0 #000; z-index:3; }
+    .seal { position:absolute; bottom:25px; right:25px; background:#0d1b2a; color:#fff; border:3px solid #000; border-radius:50%; width:110px; height:110px; display:flex; align-items:center; justify-content:center; font-size:12px; box-shadow:4px 4px 0 #000; z-index:3; }
 
-    @keyframes rotateLayer {
-      0% { transform: rotate(0deg) scale(1.1); }
-      100% { transform: rotate(360deg) scale(1.1); }
-    }
-      100% { background-position: -600px 600px; }
-    }
+    .content{padding:20px;}
+    .section{border:3px solid #000; padding:15px; margin-bottom:15px; box-shadow:4px 4px 0 #000;}
+    .section h2{font-family:'Bangers'; margin:0 0 10px;}
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.35);
-    }
+    .btn{display:inline-block; margin-top:10px; padding:10px 18px; background:#c1121f; color:#fff; text-decoration:none; border:2px solid #000; box-shadow:3px 3px 0 #000;}
 
-    .burst {
-      position: absolute;
-      bottom: 25px;
-      left: 25px;
-      background: #ffea00;
-      border: 3px solid #000;
-      padding: 15px 18px;
-      font-family: 'Bangers', cursive;
-      transform: rotate(-12deg);
-      box-shadow: 4px 4px 0 #000;
-      z-index: 2;
-    }
+    footer{text-align:center; padding:15px; background:#0d1b2a; color:#fff; border-top:5px solid #c1121f;}
 
-    .seal {
-      position: absolute;
-      bottom: 25px;
-      right: 25px;
-      background: #0d1b2a;
-      color: #fff;
-      border: 3px solid #000;
-      border-radius: 50%;
-      width: 110px;
-      height: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 12px;
-      font-weight: bold;
-      box-shadow: 4px 4px 0 #000;
-      z-index: 2;
-    }
-
-    .content {
-      padding: 20px;
-    }
-
-    .section {
-      border: 3px solid #000;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 4px 4px 0 #000;
-      background: #fff;
-    }
-
-    .section h2 {
-      font-family: 'Bangers', cursive;
-      margin: 0 0 10px;
-      font-size: 26px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 18px;
-      background: #c1121f;
-      color: #fff;
-      text-decoration: none;
-      border: 2px solid #000;
-      box-shadow: 3px 3px 0 #000;
-      font-weight: bold;
-      transition: transform 0.1s ease;
-    }
-
-    .btn:hover {
-      transform: translate(-2px, -2px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #0d1b2a;
-      color: #fff;
-      border-top: 5px solid #c1121f;
-      font-size: 14px;
-    }
-
-    .social-links {
-      margin-top: 10px;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin: 5px 8px;
-      padding: 8px 12px;
-      background: #c1121f;
-      color: #fff;
-      text-decoration: none;
-      border: 2px solid #000;
-      box-shadow: 3px 3px 0 #000;
-      font-weight: bold;
-      font-size: 12px;
-    }
-
-    .social-links img {
-      width: 16px;
-      height: 16px;
-    }
-
-    .social-links a:hover {
-      background: #e63946;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .title {
-        font-size: 40px;
-      }
-
-      .hero {
-        height: 350px;
-      }
-
-      .seal {
-        width: 80px;
-        height: 80px;
-        font-size: 10px;
-      }
-    }
+    .social-links a{display:inline-flex; align-items:center; gap:6px; margin:5px; padding:8px 12px; background:#c1121f; color:#fff; border:2px solid #000; box-shadow:3px 3px 0 #000; text-decoration:none;}
+    .social-links img{width:16px; height:16px;}
 
   </style>
 </head>
 <body>
 
 <div class="cover">
-
   <div class="top-banner">SPECIAL FX COMICS & COLLECTIBLES PRESENTS</div>
-
   <div class="title">SPECIAL FX COMICS</div>
-
   <div class="issue-box">ISSUE #1</div>
   <div class="price-box">12¢</div>
 
   <div class="hero">
-    <img src="Logo Small.jpeg" alt="Logo" style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:160px; border:3px solid #000; box-shadow:4px 4px 0 #000; z-index:3; background:#fff;">
+    <div class="layer" id="layer1"></div>
+    <div class="layer layer2" id="layer2"></div>
+    <div class="overlay"></div>
+
+    <img src="Logo Small.jpeg" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:160px; border:3px solid #000; box-shadow:4px 4px 0 #000; z-index:4; background:#fff;">
     <div class="burst">KEYS INSIDE!</div>
     <div class="seal">100% FAN APPROVED</div>
   </div>
 
   <div class="content">
-
-    <div class="section">
-      <h2>About</h2>
-      <p>From Golden Age classics, modern keys and other collectibles, we bring collectors premium comics and rare finds.</p>
-    </div>
-
-    <div class="section">
-      <h2>Inventory</h2>
-      <p>Golden Age • Silver Age • Bronze Age • Modern • Graded Comics • Toys • Pokemon • and More</p>
-      <a class="btn" href="https://www.ebay.com/usr/sfxcollectibles" target="_blank">Browse Collection</a>
-    </div>
-
-    <div class="section">
-      <h2>Our Mission</h2>
-      <p>Every purchase supports our son affected by Fragile X Syndrome. Your support makes a real difference.</p>
-    </div>
-
-    <div class="section">
-      <h2>Contact</h2>
-      <p>Bethel, CT • (646) 456-5132 or (914) 439-9421 • philgooljar@yahoo.com</p>
-    </div>
-
+    <div class="section"><h2>About</h2><p>From Golden Age classics, modern keys and collectibles.</p></div>
+    <div class="section"><h2>Inventory</h2><p>Golden • Silver • Bronze • Modern • Graded • Toys</p><a class="btn" href="https://www.ebay.com/usr/sfxcollectibles" target="_blank">Browse</a></div>
+    <div class="section"><h2>Mission</h2><p>Supporting our son with Fragile X Syndrome.</p></div>
+    <div class="section"><h2>Contact</h2><p>Bethel, CT • (646) 456-5132</p></div>
   </div>
 
   <footer>
-    © 2026 Special FX Comics & Collectibles
+    © 2026 Special FX Comics
     <div class="social-links">
-      <a href="https://www.facebook.com/specialfxcomicsandcollectibles" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
-        Facebook
-      </a>
-      <a href="https://www.instagram.com/specialfxcomicsandcollectibles/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-        Instagram
-      </a>
+      <a href="https://www.facebook.com/specialfxcomicsandcollectibles" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg">Facebook</a>
+      <a href="https://www.instagram.com/specialfxcomicsandcollectibles/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg">Instagram</a>
     </div>
   </footer>
-
 </div>
+
+<script>
+const comics = [
+  'comic1.jpg','comic2.jpg','comic3.jpg','comic4.jpg',
+  'comic5.jpg','comic6.jpg','comic7.jpg','comic8.jpg'
+];
+
+function shuffle(arr){ return arr.sort(()=>0.5-Math.random()); }
+
+function setLayer(id){
+  const shuffled = shuffle([...comics]).slice(0,4);
+  document.getElementById(id).style.backgroundImage = shuffled.map(img=>`url(${img})`).join(',');
+}
+
+setLayer('layer1');
+setLayer('layer2');
+
+// refresh every 20s
+setInterval(()=>{
+  setLayer('layer1');
+  setLayer('layer2');
+},20000);
+</script>
 
 </body>
 </html>
