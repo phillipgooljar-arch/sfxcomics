@@ -79,8 +79,25 @@
       background-size: 300px 300px;
       background-repeat: repeat;
       opacity: 0.9;
-      animation: scrollComics 25s linear infinite, rotateLayer 80s linear infinite;
+      animation: scrollComics 25s linear infinite;
       z-index: 0;
+    }
+
+    /* second layer for fading effect */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        url('comic5.jpg'),
+        url('comic6.jpg'),
+        url('comic7.jpg'),
+        url('comic8.jpg');
+      background-size: 300px 300px;
+      background-repeat: repeat;
+      opacity: 0;
+      animation: scrollComics 25s linear infinite, fadeComics 20s ease-in-out infinite;
+      z-index: 1;
     }
 
     /* dark overlay for readability */
@@ -94,9 +111,16 @@
 
     @keyframes scrollComics {
       0% { background-position: 0 0; }
+      100% { background-position: -600px 600px; }
+    }
 
-    @keyframes rotateLayer {
-      0% { transform: rotate(0deg) scale(1.1); }
+    /* fade between two comic sets */
+    @keyframes fadeComics {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 0.6; }
+    }
+
+    
       100% { transform: rotate(360deg) scale(1.1); }
     }
       100% { background-position: -800px 800px; }
@@ -300,5 +324,3 @@
 
 </body>
 </html>
-
-
