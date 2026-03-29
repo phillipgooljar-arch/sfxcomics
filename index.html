@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Special FX Comics and Collectibles</title>
+  <title>Special FX Comics & Collectibles</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -63,15 +63,38 @@
       position: relative;
       height: 520px;
       border-bottom: 6px solid #000;
-      /* Comic montage background */
+      overflow: hidden;
+    }
+
+    /* Animated scrolling comic montage layer */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
       background-image:
         url('comic1.jpg'),
         url('comic2.jpg'),
         url('comic3.jpg'),
         url('comic4.jpg');
-      background-size: 45% 45%;
-      background-position: top left, top right, bottom left, bottom right;
-      background-repeat: no-repeat;
+      background-size: 300px 300px;
+      background-repeat: repeat;
+      opacity: 0.9;
+      animation: scrollComics 25s linear infinite;
+      z-index: 0;
+    }
+
+    /* dark overlay for readability */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 1;
+    }
+
+    @keyframes scrollComics {
+      0% { background-position: 0 0; }
+      100% { background-position: -600px 600px; }
     }
 
     .hero::after {
