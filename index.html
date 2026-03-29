@@ -70,7 +70,7 @@
     .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
+      inset: -20%; /* extend to avoid edges when rotating */
       background-image:
         url('comic1.jpg'),
         url('comic2.jpg'),
@@ -79,7 +79,9 @@
       background-size: 300px 300px;
       background-repeat: repeat;
       opacity: 0.9;
-      animation: scrollComics 10s linear infinite;
+      transform-origin: center center;
+      /* combine scrolling + slow rotation */
+      animation: scrollComics 25s linear infinite, rotateLayer 80s linear infinite;
       z-index: 0;
     }
 
@@ -94,6 +96,14 @@
 
     @keyframes scrollComics {
       0% { background-position: 0 0; }
+      100% { background-position: -600px 600px; }
+    }
+
+    /* slow continuous rotation for comic wall */
+    @keyframes rotateLayer {
+      0% { transform: rotate(0deg) scale(1.1); }
+      100% { transform: rotate(360deg) scale(1.1); }
+    }
       100% { background-position: -600px 600px; }
     }
 
@@ -288,4 +298,5 @@
 
 </body>
 </html>
+
 
